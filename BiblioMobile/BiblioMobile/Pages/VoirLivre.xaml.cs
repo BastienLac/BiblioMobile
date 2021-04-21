@@ -27,7 +27,7 @@ namespace BiblioMobile.Pages
             List<Livre> lesLivres = new List<Livre>();
 
             ws = new HttpClient();
-            var reponse = await ws.GetAsync("http://127.0.0.1/Bibliotheque/APIGSB/livres/");
+            var reponse = await ws.GetAsync("http://10.0.2.2/Bibliotheque/APIGSB/livres/");
             var content = await reponse.Content.ReadAsStringAsync();
             lesLivres = JsonConvert.DeserializeObject<List<Livre>>(content);
             lvLivres.ItemsSource = lesLivres;

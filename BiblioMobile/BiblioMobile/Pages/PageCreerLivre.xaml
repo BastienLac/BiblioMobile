@@ -4,9 +4,18 @@
              x:Class="BiblioMobile.Pages.PageCreerLivre">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label WidthRequest="150" FontSize="20" HorizontalOptions="Center">Créer un livre</Label>
+            <Label>Titre du livre</Label>
+            <Entry x:Name="txtTitreLivre"></Entry>
+            <Label>Nom de l'auteur</Label>
+            <Entry x:Name="txtAuteurLivre"></Entry>
+            <Label>Url de l'image</Label>
+            <Entry x:Name="txtImageLivre"></Entry>
+            <Picker x:Name="cboGenre" WidthRequest="65" Title="Choisissez un genre" ItemsSource="{Binding GenreLivre}" ItemDisplayBinding="{Binding libelleGenre}">
+            </Picker>
+            <Picker x:Name="cboTheme" WidthRequest="65" Title="Choisissez un theme" ItemsSource="{Binding ThemeLivre}" ItemDisplayBinding="{Binding libelleTheme}">
+            </Picker>
+            <Button HorizontalOptions="Center" Text="Creer" x:Name="btnAjouter" Clicked="btnAjouter_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

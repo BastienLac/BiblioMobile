@@ -16,5 +16,10 @@ namespace BiblioMobile.Pages
         {
             InitializeComponent();
         }
+
+        private void btnAjouter_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
